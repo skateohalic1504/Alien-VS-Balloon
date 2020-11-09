@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2535488576595226834}
   - component: {fileID: 3539957098515584049}
   - component: {fileID: 6790437112071137412}
+  - component: {fileID: 1924316153373986216}
   m_Layer: 0
   m_Name: amarillos 1
-  m_TagString: Untagged
+  m_TagString: spwanBalloons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5123736540035305002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3216796, y: -1.1518087, z: 0}
+  m_LocalPosition: {x: 1.3216796, y: 500.96158, z: 0}
   m_LocalScale: {x: 0.28319082, y: 0.28319082, z: 0.28319082}
   m_Children: []
   m_Father: {fileID: 0}
@@ -114,9 +115,22 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1924316153373986216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5123736540035305002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27877e68471376a4cb2b27baa15d47b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100

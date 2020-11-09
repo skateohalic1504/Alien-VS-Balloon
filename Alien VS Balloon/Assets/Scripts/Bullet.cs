@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Bullet : MonoBehaviour
 {
@@ -9,19 +11,56 @@ public class Bullet : MonoBehaviour
 
     public int damage = 100;
 
+    //
+    public int Score;
+
+  
+
     // Start is called before the first frame update
     void Start()
     {
         rb.velocity = transform.right *-1 * speed;
     }
 
-    void OnTriggerEnter2D(Collider2D hitInfo)
+    private void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        balloon balloon = hitInfo.GetComponent<balloon>();
-        if (balloon != null)
+        redBalloon redBalloon = hitInfo.GetComponent<redBalloon>();
+        orangeBalloon orangeBalloon = hitInfo.GetComponent<orangeBalloon>();
+        greenBalloon greenBalloon = hitInfo.GetComponent<greenBalloon>();
+        yellowBalloon yellowBalloon = hitInfo.GetComponent<yellowBalloon>();
+        blueBalloons blueBalloons = hitInfo.GetComponent<blueBalloons>();
+
+        if (redBalloon != null)
         {
-            balloon.TakeDamage(damage);
+            redBalloon.TakeDamage(damage);
+            AddScore();
         }
+
+        if (orangeBalloon != null)
+        {
+            orangeBalloon.TakeDamage(damage);
+        }
+
+        if (greenBalloon != null)
+        {
+            greenBalloon.TakeDamage(damage);
+        }
+
+        if (yellowBalloon != null)
+        {
+            yellowBalloon.TakeDamage(damage);
+        }
+
+        if (blueBalloons != null)
+        {
+            blueBalloons.TakeDamage(damage);
+        }
+
         Destroy(gameObject);
+    }
+
+    void AddScore()
+    {
+        Score++;
     }
 }

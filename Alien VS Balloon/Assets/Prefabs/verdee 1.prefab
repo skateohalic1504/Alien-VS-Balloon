@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8545150467433845256}
   - component: {fileID: 6876418105080391644}
   - component: {fileID: 7326412419927668769}
+  - component: {fileID: -8096876820235045036}
   m_Layer: 0
   m_Name: verdee 1
-  m_TagString: Untagged
+  m_TagString: spwanBalloons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,9 +115,22 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-8096876820235045036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3687023005549715730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a4b5ad913aac174fad8bbef2c656ef3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100

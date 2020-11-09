@@ -18,6 +18,6 @@ public class CountDown : MonoBehaviour
     void Update()
     {
         timeStart += Time.deltaTime;
-        textBox.text = Mathf.Round(timeStart).ToString();
+        textBox.text = "Time: " + Mathf.Round(timeStart).ToString();
     }
 }

@@ -14,7 +14,7 @@ public class spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        screenHalfSizeWorldUnits = new Vector2(Camera.main.aspect * Camera.main.orthographicSize, Camera.main.orthographicSize);
+        screenHalfSizeWorldUnits = new Vector2(Camera.main.aspect * Camera.main.orthographicSize , -Camera.main.orthographicSize);
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class spawner : MonoBehaviour
         if(Time.time > nextSpawnTime)
         {
             nextSpawnTime = Time.time + secondsBetweenSpawn;
-            Vector2 spawnPosition = new Vector2(Random.Range(-screenHalfSizeWorldUnits.x, screenHalfSizeWorldUnits.x /10), screenHalfSizeWorldUnits.y*-1);
+            Vector2 spawnPosition = new Vector2(Random.Range(-screenHalfSizeWorldUnits.y, screenHalfSizeWorldUnits.y*2), -screenHalfSizeWorldUnits.x);
             Instantiate(balloonsPrefab, spawnPosition, Quaternion.identity);
         }
     }

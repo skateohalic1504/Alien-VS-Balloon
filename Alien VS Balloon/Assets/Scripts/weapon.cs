@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class weapon : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class weapon : MonoBehaviour
     public GameObject bulletPrefab;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetButtonDown("Fire1"))
         {
@@ -20,6 +21,5 @@ public class weapon : MonoBehaviour
             //shooting logic
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         }
-
     }
 }
