@@ -11,11 +11,6 @@ public class Bullet : MonoBehaviour
 
     public int damage = 100;
 
-    //
-    public int Score;
-
-  
-
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +28,6 @@ public class Bullet : MonoBehaviour
         if (redBalloon != null)
         {
             redBalloon.TakeDamage(damage);
-            AddScore();
         }
 
         if (orangeBalloon != null)
@@ -57,10 +51,5 @@ public class Bullet : MonoBehaviour
         }
 
         Destroy(gameObject);
-    }
-
-    void AddScore()
-    {
-        Score++;
     }
 }

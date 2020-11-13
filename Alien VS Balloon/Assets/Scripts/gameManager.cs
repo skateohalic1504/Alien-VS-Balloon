@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+﻿ using System.Diagnostics;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
@@ -8,8 +8,8 @@ public class gameManager : MonoBehaviour
     public Vector3 moveVector;
 
 
-    void EndGame()
+    public void EndGame()
     {
-        Debug.Log("te amo Jesus");
+        Debug.Log("Game OVer");
     }
 }
